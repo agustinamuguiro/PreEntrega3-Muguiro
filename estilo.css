@@ -38,8 +38,9 @@ header {
   display: inline-block;
   padding: 10px;
   position: relative;
-  left: 450px;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  left: 400px;
   z-index: 2;
 }
 
@@ -245,16 +246,15 @@ section#navegador {
 #titulo h3{
   grid-area: titulo;
   font-family: titulos;
-  display: flex;
   width: auto;
   color: #5a0a9f;
   font-size: 50px;
   white-space: nowrap;
   position: absolute;
   top: 0;
-  left: 120px;
   width: 100%;
   text-align: center;
+  display: flex;
 }
 
 
@@ -607,55 +607,208 @@ input[type="submit"]:hover {
   background-color: #7e7e7e;
 }
 
-@media (max-width: 350px) {
 
+@media only screen and (max-width: 350px) {
   #grilla {
-    height: auto;
-    min-width: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 5px;
-    grid-template-areas:
-      "header1"
-      "header2"
-      "header3"
-      "nav"
-      "texto"
-      "footer";
-    padding: 20px;
+    padding: 10px;
+    grid-gap: 10px;
   }
 
-  section#head1 {
-    height: 30px;
-    font-size: 20px;
-  }
-
-  section#head2 {
-    height: 30px;
-    font-size: 18px;
-  }
-
+  section#head1,
+  section#head2,
   section#head3 {
-    height: 30px;
-    font-size: 18px;
-  }
-
-  section#navegador {
-    height: 150px;
-  }
-
-  section#pie {
-    height: 150px;
+    height: 60px;
+    font-size: 16px;
   }
 
   section#texto {
-    height: 420px;
+    padding-top: 30px;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 18px;
   }
 }
 
+section#head1,
+section#head2,
+section#head3 {
+  font-family: titulos;
+  text-align: center;
+  color: rgb(0, 75, 237);
+  overflow: hidden;
+}
+
+section#head1 {
+  grid-area: header1;
+  height: 90px;
+  font-size: 22px;
+}
+
+section#head2 {
+  grid-area: header2;
+  height: 120px;
+  font-size: 22px;
+}
+
+section#head3 {
+  grid-area: header3;
+  height: 160px;
+  font-size: 22px;
+}
+
+section#pie {
+  grid-area: footer;
+  background-color: #333;
+  background-image: url(imagenes/code\ about\ us.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+section#texto {
+  grid-area: texto;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 351px) and (max-width: 768px) {
+  #grilla {
+    padding: 15px;
+    grid-gap: 15px;
+  }
+
+  section#head1,
+  section#head2,
+  section#head3 {
+    font-size: 18px;
+  }
+
+  section#texto {
+    padding-top: 40px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+section#head1,
+section#head2,
+section#head3 {
+  font-family: titulos;
+  text-align: center;
+  color: rgb(0, 75, 237);
+  overflow: hidden;
+}
+
+section#head1 {
+  grid-area: header1;
+  height: 90px;
+  font-size: 22px;
+}
+
+section#head2 {
+  grid-area: header2;
+  height: 120px;
+  font-size: 22px;
+}
+
+section#head3 {
+  grid-area: header3;
+  height: 160px;
+  font-size: 22px;
+}
+
+section#pie {
+  grid-area: footer;
+  background-color: #333;
+  background-image: url(imagenes/code\ about\ us.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+section#texto {
+  grid-area: texto;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 769px) {
+  #grilla {
+    padding: 15px;
+    grid-gap: 15px;
+  }
+
+  section#head1,
+  section#head2,
+  section#head3 {
+    font-size: 18px;
+  }
+
+  section#texto {
+    padding-top: 40px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+section#head1,
+section#head2,
+section#head3 {
+  font-family: titulos;
+  text-align: center;
+  color: rgb(0, 75, 237);
+  overflow: hidden;
+}
+
+section#head1 {
+  grid-area: header1;
+  height: 90px;
+  font-size: 22px;
+}
+
+section#head2 {
+  grid-area: header2;
+  height: 120px;
+  font-size: 22px;
+}
+
+section#head3 {
+  grid-area: header3;
+  height: 160px;
+  font-size: 22px;
+}
+
+section#pie {
+  grid-area: footer;
+  background-color: #333;
+  background-image: url(imagenes/code\ about\ us.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+section#texto {
+  grid-area: texto;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 350px) {
+
   #contenedor-principal {
     height: auto;
     background-size: cover;
@@ -682,10 +835,10 @@ input[type="submit"]:hover {
   }
 
   #titulo {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     font-size: 15px;
     padding-right: 14px;
-
   }
 
   #diseño,
@@ -708,6 +861,7 @@ input[type="submit"]:hover {
   }
 
   .contenedor-2 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 150px 150px 150px 150px;
     padding-top: 30px;
@@ -738,5 +892,330 @@ input[type="submit"]:hover {
 
   .grande {
     filter: grayscale(100%);
+  }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 768px) {
+  #titulo {
+    width: 100%;
+    max-width: 768px;
+    font-size: 18px;
+    padding-right: 20px;
+  }
+
+  #diseño,
+  #evento,
+  #produccion {
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #texto1,
+  #texto2,
+  #texto3 {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+
+  .contenedor-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+ 
+  body {
+    margin: 0; 
+  }
+
+  #contenedor-principal {
+    height: auto;
+    background-size: cover;
+    padding: 0 10px; 
+  }
+
+  #portada {
+    height: 60vh;
+  }
+
+  #contenedor {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    padding: 20px 0; 
+    grid-template-areas:
+      "titulo titulo titulo"
+      "diseño evento produccion"
+      "texto1 texto2 texto3";
+  }
+
+  #titulo {
+    width: 100%;
+    font-size: 40px;
+    padding-right: 14px;
+    grid-area: titulo;
+    justify-content: center;
+    text-align: center; 
+    display: grid;
+    padding: 40px;
+    margin-left: 400px;
+  }
+
+  #diseño,
+  #evento,
+  #produccion {
+    height: 10px;
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #diseño {
+    grid-area: diseño;
+  }
+
+  #evento {
+    grid-area: evento;
+  }
+
+  #produccion {
+    grid-area: produccion;
+  }
+
+  #texto1,
+  #texto2,
+  #texto3 {
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 10px;
+    text-align: center; 
+  }
+
+  #texto1 {
+    grid-area: texto1;
+  }
+
+  #texto2 {
+    grid-area: texto2;
+  }
+
+  #texto3 {
+    grid-area: texto3;
+  }
+
+  .contenedor-2 {
+    display: flex;
+    justify-content: center; 
+    padding-top: 30px;
+  }
+
+  .columna-1,
+  .columna-2,
+  .columna-3,
+  .columna-4,
+  .columna-5,
+  .columna-6,
+  .columna-7,
+  .columna-8,
+  .columna-9 {
+    margin: 0;
+    padding: 40px;
+    padding-top: 70px;
+    height: auto;
+    width: calc(33.33% - 20px); 
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contenedor-2 .grande:hover {
+    filter: grayscale(0%);
+  }
+
+  .grande {
+    filter: grayscale(100%);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .grid-container {
+    padding: 5px;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item7,
+  .item8,
+  .item9 {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+
+  .item4,
+  .item5,
+  .item6,
+  .item10,
+  .item11,
+  .item12 {
+    height: 30px;
+    font-size: 12px;
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 768px) {
+  .grid-container {
+    padding: 8px;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item7,
+  .item8,
+  .item9 {
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+  }
+
+  .item4,
+  .item5,
+  .item6,
+  .item10,
+  .item11,
+  .item12 {
+    height: 40px;
+    font-size: 15px;
+    margin-top: -25px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .grid-container {
+    padding: 10px;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item7,
+  .item8,
+  .item9 {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+  }
+
+  .item4,
+  .item5,
+  .item6,
+  .item10,
+  .item11,
+  .item12 {
+    height: 50px;
+    font-size: 25px;
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .grid-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 12px;
+  }
+
+  input[type="submit"] {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 768px) {
+  .grid-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .grid-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    font-size: 16px;
   }
 }
